@@ -334,10 +334,11 @@
       
         
           
-            <h1 id="docker-for-mac问题记录"><a href="#docker-for-mac问题记录" class="headerlink" title="docker for mac问题记录"></a>docker for mac问题记录</h1><h2 id="1：数据卷路径无法找到"><a href="#1：数据卷路径无法找到" class="headerlink" title="1：数据卷路径无法找到"></a>1：数据卷路径无法找到</h2><blockquote>
-<p>在linux上，使用docker创建数据卷：docker volume create –name v1<br>查看数据卷信息：docker inspect v1<br><img src="/2018/12/21/docker-for-mac/1.png" alt="数据卷信息" title="数据卷信息"><br>其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指的就是数据卷的实际目录。<br>在linux上可以直接进入到数据卷的目录，但是mac上…<br><img src="/2018/12/21/docker-for-mac/2.png" alt="找不到文件" title="找不到文件"><br>经过百度了解到，docker在mac上运行实际也是跑了一个linux的虚拟机，数据卷文件不会直接放在宿主机上，经过查阅相关资料，发现可以打开docker虚拟机窗口并找到它。<br>在mac上执行命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty</span><br></pre></td></tr></table></figure></p>
+            <h1 id="docker-for-mac问题记录"><a href="#docker-for-mac问题记录" class="headerlink" title="docker for mac问题记录"></a>docker for mac问题记录</h1><h2 id="1：数据卷路径无法找到"><a href="#1：数据卷路径无法找到" class="headerlink" title="1：数据卷路径无法找到"></a>1：数据卷路径无法找到</h2><p>今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。</p>
+<blockquote>
+<p>在linux上，使用docker创建数据卷：docker volume create –name v1<br>查看数据卷信息：docker inspect v1<br><img src="/2018/12/21/docker-for-mac/1.png" alt="数据卷信息" title="数据卷信息"><br>其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指的就是数据卷的实际目录。<br>在linux上可以直接进入到数据卷的目录，但是mac上,发现不存在数据卷的路径并不存在，到底是怎么回事呢？<br><img src="/2018/12/21/docker-for-mac/2.png" alt="找不到文件" title="找不到文件"><br>经过百度了解到，docker在mac上运行实际也是跑了一个linux的虚拟机，docker数据卷的路径显示的是虚拟机里的路径，在宿主机上则无法找到。那么如何才能进入数据卷目录，查看数据呢？<br>经过查阅相关资料，发现可以打开docker虚拟机窗口并找到它。<br>在mac上执行命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>即可打开docker虚拟机的界面<br>再次尝试,发现可以进入<br><img src="/2018/12/21/docker-for-mac/3.png" alt="数据卷目录" title="数据卷目录"></p>
+<p>即可打开docker虚拟机的界面<br>再次尝试进入volumes，OK！<br><img src="/2018/12/21/docker-for-mac/3.png" alt="数据卷目录" title="数据卷目录"></p>
 
           
         
