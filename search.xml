@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[docker for mac]]></title>
-    <url>%2F2018%2F12%2F21%2Fdocker-for-mac%2F</url>
-    <content type="text"><![CDATA[docker for mac问题记录1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。 在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指的就是数据卷的实际目录。在linux上可以直接进入到数据卷的目录，但是mac上,发现不存在数据卷的路径并不存在，到底是怎么回事呢？经过百度了解到，docker在mac上运行实际也是跑了一个linux的虚拟机，docker数据卷的路径显示的是虚拟机里的路径，在宿主机上则无法找到。那么如何才能进入数据卷目录，查看数据呢？经过查阅相关资料，发现可以打开docker虚拟机窗口并找到它。在mac上执行命令：1screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty 即可打开docker虚拟机的界面再次尝试进入volumes，OK！]]></content>
+    <title><![CDATA[备急方]]></title>
+    <url>%2F2019%2F01%2F14%2F%E5%A4%87%E6%80%A5%E6%96%B9%2F</url>
+    <content type="text"><![CDATA[VUE项目PC端对m3u8流视频格式的支持1写项目时，发现要播放m3u8流媒体视频，安卓和IOS可以直接支持m3u8格式，但是PC端浏览器不能直接支持，github上有相应的插件，但是在vue的项目上使用体验却不好，找到另一种解决方案。 安装vue-video-player插件npm install vue-video-player -S 项目引入 1234import VideoPlayer from 'vue-video-player'require('video.js/dist/video-js.css')require('vue-video-player/src/custom-theme.css')Vue.use(VideoPlayer) 播放页挂载完成时，调用方法 123456789101112videojs('video-player-id', &#123; bigPlayButton: false, textTrackDisplay: false, posterImage: true, errorDisplay: false, controlBar: true&#125;, function () &#123; this.play()&#125;)videojs("video-player-id").src([ &#123;type: "application/x-mpegURL", src: "视频URL" &#125;]);]]></content>
       <categories>
-        <category>小记</category>
+        <category>疑难杂症</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>视频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac问题记录]]></title>
+    <url>%2F2018%2F12%2F21%2Fdocker-for-mac%2F</url>
+    <content type="text"><![CDATA[1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。 在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指的就是数据卷的实际目录。在linux上可以直接进入到数据卷的目录，但是mac上,发现不存在数据卷的路径并不存在，到底是怎么回事呢？经过百度了解到，docker在mac上运行实际也是跑了一个linux的虚拟机，docker数据卷的路径显示的是虚拟机里的路径，在宿主机上则无法找到。那么如何才能进入数据卷目录，查看数据呢？经过查阅相关资料，发现可以打开docker虚拟机窗口并找到它。在mac上执行命令：1screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty 即可打开docker虚拟机的界面再次尝试进入volumes，OK！]]></content>
+      <categories>
+        <category>mac</category>
       </categories>
       <tags>
         <tag>docker</tag>

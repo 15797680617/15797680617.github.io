@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,21 +86,21 @@
 
 
 
-<meta name="description" content="docker for mac问题记录1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。  在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/v">
+<meta name="description" content="1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。  在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指">
 <meta name="keywords" content="docker,mac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker for mac">
+<meta property="og:title" content="Mac问题记录">
 <meta property="og:url" content="http://yoursite.com/2018/12/21/docker-for-mac/index.html">
 <meta property="og:site_name" content="长河的博客">
-<meta property="og:description" content="docker for mac问题记录1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。  在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/v">
+<meta property="og:description" content="1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。  在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/21/docker-for-mac/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/21/docker-for-mac/2.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/21/docker-for-mac/3.png">
-<meta property="og:updated_time" content="2019-01-13T13:47:40.895Z">
+<meta property="og:updated_time" content="2019-01-14T12:55:59.887Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker for mac">
-<meta name="twitter:description" content="docker for mac问题记录1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。  在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/v">
+<meta name="twitter:title" content="Mac问题记录">
+<meta name="twitter:description" content="1：数据卷路径无法找到今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。  在linux上，使用docker创建数据卷：docker volume create –name v1查看数据卷信息：docker inspect v1其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指">
 <meta name="twitter:image" content="http://yoursite.com/2018/12/21/docker-for-mac/1.png">
 
 
@@ -109,7 +109,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -137,7 +137,7 @@
 
 
 
-  <title>docker for mac | 长河的博客</title>
+  <title>Mac问题记录 | 长河的博客</title>
   
 
 
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">docker for mac</h1>
+          <h1 class="post-title" itemprop="name headline">Mac问题记录</h1>
         
 
         <div class="post-meta">
@@ -360,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/小记/" itemprop="url" rel="index">
-                    <span itemprop="name">小记</span>
+                  <a href="/categories/mac/" itemprop="url" rel="index">
+                    <span itemprop="name">mac</span>
                   </a>
                 </span>
 
@@ -408,7 +408,7 @@
       
 
       
-        <h1 id="docker-for-mac问题记录"><a href="#docker-for-mac问题记录" class="headerlink" title="docker for mac问题记录"></a>docker for mac问题记录</h1><h2 id="1：数据卷路径无法找到"><a href="#1：数据卷路径无法找到" class="headerlink" title="1：数据卷路径无法找到"></a>1：数据卷路径无法找到</h2><p>今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。</p>
+        <h2 id="1：数据卷路径无法找到"><a href="#1：数据卷路径无法找到" class="headerlink" title="1：数据卷路径无法找到"></a>1：数据卷路径无法找到</h2><p>今天在mac上通过docker创建mysql实例搭建集群时，意外的发现数据卷的目录在mac上根本找不到，特地记录一下。</p>
 <blockquote>
 <p>在linux上，使用docker创建数据卷：docker volume create –name v1<br>查看数据卷信息：docker inspect v1<br><img src="/2018/12/21/docker-for-mac/1.png" alt="数据卷信息" title="数据卷信息"><br>其中”Mountpoint”: “/var/lib/docker/volumes/v1/_data” 指的就是数据卷的实际目录。<br>在linux上可以直接进入到数据卷的目录，但是mac上,发现不存在数据卷的路径并不存在，到底是怎么回事呢？<br><img src="/2018/12/21/docker-for-mac/2.png" alt="找不到文件" title="找不到文件"><br>经过百度了解到，docker在mac上运行实际也是跑了一个linux的虚拟机，docker数据卷的路径显示的是虚拟机里的路径，在宿主机上则无法找到。那么如何才能进入数据卷目录，查看数据呢？<br>经过查阅相关资料，发现可以打开docker虚拟机窗口并找到它。<br>在mac上执行命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen ~/Library/Containers/com.docker.docker/Data/vms/0/tty</span><br></pre></td></tr></table></figure></p>
 </blockquote>
@@ -470,6 +470,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/14/备急方/" rel="prev" title="备急方">
+                备急方 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -550,7 +566,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -561,7 +577,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -572,7 +588,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -635,7 +651,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker-for-mac问题记录"><span class="nav-number">1.</span> <span class="nav-text">docker for mac问题记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1：数据卷路径无法找到"><span class="nav-number">1.1.</span> <span class="nav-text">1：数据卷路径无法找到</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1：数据卷路径无法找到"><span class="nav-number">1.</span> <span class="nav-text">1：数据卷路径无法找到</span></a></li></ol></div>
             
 
           </div>
@@ -647,7 +663,7 @@
 
     </div>
     <div id="music163player">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26545233&auto=1&height=66"></iframe>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=3&id=2057390424&auto=0&height=66"></iframe>
     </div>
   </aside>
 
